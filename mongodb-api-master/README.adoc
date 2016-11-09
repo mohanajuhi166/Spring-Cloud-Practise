@@ -1,0 +1,22 @@
+== 1. Install and launch MongoDB
+
+1. $ brew install mongodb
+2. $ sudo mkdir -p /data/db
+3. $ sudo mongod
+
+== 2. Build an executable JAR
+
+1. $ cd mongodb_api
+2. $ ./gradlew clean build
+3. this should build the mongodb-api-0.1.0.jar to build/libs/
+
+== 3. Run the API Service
+
+1. make sure your mongodb still up
+2. from another terminal, java -jar build/libs/mongodb-api-0.1.0.jar
+
+== 4. Verify from localhost
+
+1. from a web browser, run http://localhost:8080/
+2. should see a record returned as
+   Customer[id=5822b9dfa7c07f6d4adf1c4e, firstName='Alice', lastName='Smith']
